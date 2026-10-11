@@ -1,14 +1,556 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Harnaj Hospital</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BlueCare Hospital | Healthcare & Appointments</title>
+    <meta name="description"
+          content="harnaj Hospital - doctors, medical services and online appointments.">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://images.unsplash.com">
+
+    <!-- QR scanner library -->
+    <script src="https://unpkg.com/html5-qrcode" defer></script>
+    <script src="script.js" defer></script>
 </head>
+
 <body>
-  <h1>Welcome to Harnaj Hospital</h1>
-  <p>Your health is our priority.</p>
-  <script src="script.js"></script>
+
+<header class="header">
+    <a class="logo" href="#home">
+        <span class="logo-icon">✚</span>
+        <span>BlueCare <small>HOSPITAL</small></span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+            aria-label="Toggle navigation">☰</button>
+
+    <nav class="nav" id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#doctors">Doctors</a>
+        <a href="#team">Our Team</a>
+        <a href="#appointment">Appointment</a>
+        <a href="#qr">QR Code</a>
+    </nav>
+</header>
+
+<main>
+
+<!-- HOME -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <span class="eyebrow">WELCOME TO harnaj HOSPITAL</span>
+
+        <h1>Your Health,<br>
+            <span>Our First Priority.</span>
+        </h1>
+
+        <p>
+            Quality healthcare, experienced medical professionals,
+            compassionate care and modern medical facilities for your family.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#appointment" class="btn btn-primary">
+                Book Appointment
+            </a>
+            <a href="#services" class="btn btn-light">
+                Explore Services
+            </a>
+        </div>
+
+        <div class="hero-stats">
+            <div><strong>24/7</strong><span>Emergency Care</span></div>
+            <div><strong>Expert</strong><span>Medical Team</span></div>
+            <div><strong>Modern</strong><span>Facilities</span></div>
+        </div>
+    </div>
+
+    <div class="hero-image">
+        <img
+          src="https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?auto=format&fit=crop&w=1100&q=85"
+          alt="Modern hospital building"
+          fetchpriority="high">
+        <div class="floating-card">
+            <span class="floating-icon">♥️</span>
+            <div>
+                <strong>Care With Compassion</strong>
+                <p>Your health matters to us.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- QUICK INFORMATION -->
+<section class="quick-info container">
+    <article class="info-card">
+        <span class="info-icon">🚑</span>
+        <div><h3>Emergency Care</h3><p>Medical assistance when needed.</p></div>
+    </article>
+    <article class="info-card">
+        <span class="info-icon">🩺</span>
+        <div><h3>Expert Doctors</h3><p>Professional healthcare services.</p></div>
+    </article>
+    <article class="info-card">
+        <span class="info-icon">🏥</span>
+        <div><h3>Modern Facilities</h3><p>Patient-focused hospital care.</p></div>
+    </article>
+</section>
+
+<!-- ABOUT -->
+<section class="section container" id="about">
+    <div class="about-grid">
+        <div class="about-image">
+            <img
+              src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=80"
+              alt="Healthcare professional caring for a patient"
+              loading="lazy">
+
+            <div class="image-label">
+                <strong>Care Comes First</strong>
+                <span>Every patient matters.</span>
+            </div>
+        </div>
+
+        <div class="about-content">
+            <span class="eyebrow">ABOUT OUR HOSPITAL</span>
+            <h2>Helping You Live a <span>Healthier Life</span></h2>
+
+            <p>
+                BlueCare Hospital is a healthcare website project designed
+                to provide information about medical services, doctors,
+                appointment requests and patient support.
+            </p>
+
+            <p>
+                Our goal is to make hospital information easy to access
+                through a clean, user-friendly and responsive website.
+            </p>
+
+            <ul class="check-list">
+                <li>✔️ Patient-focused services</li>
+                <li>✔️ Online appointment request form</li>
+                <li>✔️ Multiple medical departments</li>
+                <li>✔️ Easy access on mobile and computer</li>
+            </ul>
+
+            <a href="#appointment" class="btn btn-primary">
+                Make an Appointment
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section section-soft" id="services">
+    <div class="container">
+        <div class="section-heading">
+            <span class="eyebrow">OUR MEDICAL SERVICES</span>
+            <h2>Healthcare for <span>Every Need</span></h2>
+            <p>Explore the services available in our hospital project.</p>
+        </div>
+
+        <div class="service-grid">
+            <article class="service-card">
+                <img src="https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?auto=format&fit=crop&w=600&q=80"
+                     alt="Cardiology care" loading="lazy">
+                <div class="service-body">
+                    <span class="service-icon">♥️</span>
+                    <h3>Cardiology</h3>
+                    <p>Heart health information and consultation requests.</p>
+                    <a href="#appointment">Book a visit →</a>
+                </div>
+            </article>
+
+            <article class="service-card">
+                <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=600&q=80"
+                     alt="Neurology medical care" loading="lazy">
+                <div class="service-body">
+                    <span class="service-icon">🧠</span>
+                    <h3>Neurology</h3>
+                    <p>Information about brain and nervous system care.</p>
+                    <a href="#appointment">Book a visit →</a>
+                </div>
+            </article>
+
+            <article class="service-card">
+                <img src="https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?auto=format&fit=crop&w=600&q=80"
+                     alt="Pediatric medical care" loading="lazy">
+                <div class="service-body">
+                    <span class="service-icon">✚</span>
+                    <h3>Pediatrics</h3>
+                    <p>Healthcare information for infants and children.</p>
+                    <a href="#appointment">Book a visit →</a>
+                </div>
+            </article>
+
+            <article class="service-card">
+                <img src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&w=600&q=80"
+                     alt="Nurse providing patient care" loading="lazy">
+                <div class="service-body">
+                    <span class="service-icon">🩹</span>
+                    <h3>General Medicine</h3>
+                    <p>General consultation and routine health concerns.</p>
+                    <a href="#appointment">Book a visit →</a>
+                </div>
+            </article>
+
+            <article class="service-card">
+                <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80"
+                     alt="Hospital patient room" loading="lazy">
+                <div class="service-body">
+                    <span class="service-icon">🛏️</span>
+                    <h3>Patient Care</h3>
+                    <p>Patient support and hospital facility information.</p>
+                    <a href="#appointment">Contact us →</a>
+                </div>
+            </article>
+
+            <article class="service-card">
+                <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=600&q=80"
+                     alt="Medical laboratory" loading="lazy">
+                <div class="service-body">
+                    <span class="service-icon">🔬</span>
+                    <h3>Diagnostics</h3>
+                    <p>Information about diagnostic and laboratory services.</p>
+                    <a href="#appointment">Contact us →</a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- DOCTORS -->
+<section class="section container" id="doctors">
+    <div class="section-heading">
+        <span class="eyebrow">MEET OUR DOCTORS</span>
+        <h2>Our Medical <span>Specialists</span></h2>
+        <p>Sample doctor profiles for this hospital website project.</p>
+    </div>
+
+    <div class="doctor-grid">
+        <article class="doctor-card">
+            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=650&q=80"
+                 alt="Doctor profile one" loading="lazy">
+            <div class="doctor-info">
+                <span class="doctor-tag">Cardiology</span>
+                <h3>Dr. Aarav Sharma</h3>
+                <p>Heart Care Specialist</p>
+                <a href="#appointment" class="btn btn-outline">Book Appointment</a>
+            </div>
+        </article>
+
+        <article class="doctor-card">
+            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=650&q=80"
+                 alt="Doctor profile two" loading="lazy">
+            <div class="doctor-info">
+                <span class="doctor-tag">General Medicine</span>
+                <h3>Dr. Simran Kaur</h3>
+                <p>General Physician</p>
+                <a href="#appointment" class="btn btn-outline">Book Appointment</a>
+            </div>
+        </article>
+
+        <article class="doctor-card">
+            <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=650&q=80"
+                 alt="Doctor profile three" loading="lazy">
+            <div class="doctor-info">
+                <span class="doctor-tag">Neurology</span>
+                <h3>Dr. Kabir Singh</h3>
+                <p>Neurology Specialist</p>
+                <a href="#appointment" class="btn btn-outline">Book Appointment</a>
+            </div>
+        </article>
+
+        <article class="doctor-card">
+            <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=650&q=80"
+                 alt="Doctor profile four" loading="lazy">
+            <div class="doctor-info">
+                <span class="doctor-tag">Pediatrics</span>
+                <h3>Dr. Meera Verma</h3>
+                <p>Child Healthcare</p>
+                <a href="#appointment" class="btn btn-outline">Book Appointment</a>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- HOSPITAL GALLERY -->
+<section class="section section-soft" id="gallery">
+    <div class="container">
+        <div class="section-heading">
+            <span class="eyebrow">INSIDE BLUECARE</span>
+            <h2>Our Hospital <span>Gallery</span></h2>
+            <p>Hospital spaces, patient rooms and medical facilities.</p>
+        </div>
+
+        <div class="gallery-grid">
+            <figure class="gallery-item gallery-large">
+                <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1000&q=80"
+                     alt="Hospital interior" loading="lazy">
+                <figcaption>Hospital Interior</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=700&q=80"
+                     alt="Medical professional at work" loading="lazy">
+                <figcaption>Medical Care</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=700&q=80"
+                     alt="Healthcare worker" loading="lazy">
+                <figcaption>Healthcare Team</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=700&q=80"
+                     alt="Doctor examining a patient" loading="lazy">
+                <figcaption>Patient Consultation</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&w=700&q=80"
+                     alt="Nurse caring for a patient" loading="lazy">
+                <figcaption>Nursing Care</figcaption>
+            </figure>
+        </div>
+    </div>
+</section>
+
+<!-- MEDICAL TEAM -->
+<section class="section container" id="team">
+    <div class="section-heading">
+        <span class="eyebrow">OUR PEOPLE</span>
+        <h2>Doctors, Nurses & <span>Medical Staff</span></h2>
+        <p>Our sample gallery celebrates the people who care for patients.</p>
+    </div>
+
+    <div class="team-grid">
+        <article class="team-card">
+            <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=700&q=80"
+                 alt="Nurse in hospital uniform" loading="lazy">
+            <div><h3>Nursing Team</h3><p>Patient assistance and nursing care</p></div>
+        </article>
+
+        <article class="team-card">
+            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=700&q=80"
+                 alt="Doctor consulting a patient" loading="lazy">
+            <div><h3>Medical Consultation</h3><p>Doctor and patient interaction</p></div>
+        </article>
+
+        <article class="team-card">
+            <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?auto=format&fit=crop&w=700&q=80"
+                 alt="Medical team working together" loading="lazy">
+            <div><h3>Hospital Staff</h3><p>Teamwork in healthcare</p></div>
+        </article>
+
+        <article class="team-card">
+            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=700&q=80"
+                 alt="Patient being examined" loading="lazy">
+            <div><h3>Patient Support</h3><p>Respectful patient-focused care</p></div>
+        </article>
+    </div>
+</section>
+
+<!-- APPOINTMENT -->
+<section class="section appointment-section" id="appointment">
+    <div class="container appointment-grid">
+        <div class="appointment-content">
+            <span class="eyebrow">ONLINE APPOINTMENT</span>
+            <h2>Book Your <span>Appointment</span></h2>
+            <p>
+                Fill in your details and select a department to request
+                an appointment with our medical team.
+            </p>
+
+            <div class="appointment-benefit">
+                <span>✓</span>
+                <div><strong>Simple booking form</strong>
+                    <p>Submit your details in a few steps.</p></div>
+            </div>
+
+            <div class="appointment-benefit">
+                <span>✓</span>
+                <div><strong>Multiple departments</strong>
+                    <p>Select the department you need.</p></div>
+            </div>
+
+            <img class="appointment-image"
+                 src="https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?auto=format&fit=crop&w=800&q=80"
+                 alt="Healthcare professional with patient" loading="lazy">
+        </div>
+
+        <form class="appointment-form" id="appointmentForm">
+            <h3>Appointment Request</h3>
+            <p class="form-intro">Fields marked * are required.</p>
+
+            <label for="patientName">Patient Name *</label>
+            <input type="text" id="patientName" name="patientName"
+                   placeholder="Enter full name" autocomplete="name" required>
+
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone"
+                   placeholder="Enter phone number"
+                   autocomplete="tel" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email"
+                   placeholder="Enter email address" autocomplete="email">
+
+            <label for="department">Department *</label>
+            <select id="department" name="department" required>
+                <option value="">Choose a department</option>
+                <option value="Cardiology">Cardiology</option>
+                <option value="Neurology">Neurology</option>
+                <option value="Pediatrics">Pediatrics</option>
+                <option value="General Medicine">General Medicine</option>
+            </select>
+
+            <label for="appointmentDate">Appointment Date *</label>
+            <input type="date" id="appointmentDate" name="appointmentDate"
+                   required>
+
+            <button type="submit" class="btn btn-primary submit-btn"
+                    id="bookingButton">
+                Book Appointment →
+            </button>
+
+            <p id="bookingMessage" class="form-message"
+               role="status" aria-live="polite"></p>
+
+            <p class="privacy-note">
+                Please provide accurate contact information.
+                This form is not for medical emergencies.
+            </p>
+        </form>
+    </div>
+</section>
+
+<!-- QR SCANNER -->
+<section class="section container" id="scanner">
+    <div class="section-heading">
+        <span class="eyebrow">SCAN A QR CODE</span>
+        <h2>QR Code <span>Scanner</span></h2>
+        <p>Use your device camera to scan a QR code.</p>
+    </div>
+
+    <div class="scanner-card">
+        <div class="scanner-instructions">
+            <span class="scanner-symbol">▦</span>
+            <h3>Scan with your camera</h3>
+            <p>
+                Press Start Scanner, allow camera access and point
+                the camera at a QR code.
+            </p>
+
+            <button type="button" class="btn btn-primary" id="startScanner">
+                Start Scanner
+            </button>
+            <button type="button" class="btn btn-outline"
+                    id="stopScanner" disabled>
+                Stop Scanner
+            </button>
+
+            <p id="scannerMessage" class="form-message"
+               role="status" aria-live="polite"></p>
+
+            <div id="scanResult" class="scan-result" hidden>
+                <strong>Scan Result</strong>
+                <p id="scanText"></p>
+                <a id="scanOpenLink" href="#" target="_blank"
+                   rel="noopener noreferrer" hidden>Open scanned link</a>
+                <button type="button" id="copyScan"
+                        class="btn btn-outline">Copy Result</button>
+            </div>
+        </div>
+
+        <div id="qr-reader" class="qr-reader"></div>
+    </div>
+</section>
+
+<!-- QR CODE AT THE END -->
+<section class="section qr-section" id="qr">
+    <div class="container">
+        <div class="section-heading">
+            <span class="eyebrow">QUICK ACCESS</span>
+            <h2>Hospital <span>QR Code</span></h2>
+            <p>
+                Scan the code to open your hospital website after it has
+                been hosted online.
+            </p>
+        </div>
+
+        <div class="qr-card">
+            <div class="qr-placeholder" id="websiteQr">
+                <span>QR</span>
+                <p>Your website QR code will appear here.</p>
+            </div>
+
+            <div class="qr-details">
+                <h3>Visit BlueCare Hospital</h3>
+                <p id="qrDescription">
+                    Once your website is hosted, enter its public URL below
+                    to generate a QR code.
+                </p>
+
+                <label for="websiteUrl">Website URL</label>
+                <input type="url" id="websiteUrl"
+                       placeholder="https://your-hospital-website.com">
+
+                <button type="button" class="btn btn-primary"
+                        id="generateQr">
+                    Generate Website QR
+                </button>
+
+                <p class="privacy-note">
+                    This QR links to your website; it is not a payment QR.
+                    For real payments, use a verified payment QR from your
+                    own payment provider.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="container footer-grid">
+        <div>
+            <a class="logo footer-logo" href="#home">
+                <span class="logo-icon">✚</span>
+                <span>BlueCare <small>HOSPITAL</small></span>
+            </a>
+            <p>Professional healthcare information and online appointment
+               requests in one place.</p>
+        </div>
+
+        <div>
+            <h3>Quick Links</h3>
+            <a href="#about">About Us</a>
+            <a href="#services">Services</a>
+            <a href="#doctors">Doctors</a>
+            <a href="#appointment">Appointments</a>
+        </div>
+
+        <div>
+            <h3>Contact Information</h3>
+            <p>📍 Add your hospital address</p>
+            <p>☎️ Add your hospital phone number</p>
+            <p>✉️ Add your hospital email</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© <span id="currentYear"></span> BlueCare Hospital.
+           Student project demonstration.</p>
+    </div>
+</footer>
+
 </body>
 </html>
